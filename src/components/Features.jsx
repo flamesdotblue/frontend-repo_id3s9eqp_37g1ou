@@ -1,36 +1,36 @@
-import { Zap, Shield, Gauge, Layers } from 'lucide-react';
+import { BarChart3, Gauge, Shield, Layers } from 'lucide-react';
 
 const features = [
   {
-    icon: Zap,
-    title: 'Instant impact',
-    desc: 'Engage users from the first frame with a responsive, interactive loading experience.'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise-grade',
-    desc: 'Built with accessibility, performance, and reliability baked in from day one.'
-  },
-  {
-    icon: Gauge,
-    title: 'Performance tuned',
-    desc: 'Optimized assets, smart lazy-loading, and best practices out of the box.'
+    icon: BarChart3,
+    title: 'Funnels & conversion',
+    desc: 'Visualize drop‑offs across journeys and optimize the steps that matter most.'
   },
   {
     icon: Layers,
-    title: 'Plug-and-play',
-    desc: 'Flexible components that drop into any stack with minimal configuration.'
+    title: 'Cohorts & segmentation',
+    desc: 'Slice users by behavior or attributes to uncover patterns and drive retention.'
+  },
+  {
+    icon: Gauge,
+    title: 'Real‑time events',
+    desc: 'Stream events as they happen. Answer questions in seconds, not days.'
+  },
+  {
+    icon: Shield,
+    title: 'Privacy built‑in',
+    desc: 'Regional data controls, role‑based access, and audit trails for peace of mind.'
   }
 ];
 
 export default function Features() {
   return (
-    <section id="features" className="relative bg-black py-20 text-white">
+    <section id="features" className="relative bg-white py-20 text-slate-900">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Everything you need to look fast</h2>
-          <p className="mt-3 text-white/70">
-            A focused toolkit that makes your SaaS feel modern, premium, and lightning quick — before users even log in.
+          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Answer product questions fast</h2>
+          <p className="mt-3 text-slate-600">
+            Everything you need to go from raw events to clear insight—without the busywork.
           </p>
         </div>
 
@@ -38,14 +38,14 @@ export default function Features() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="group relative rounded-xl border border-white/10 bg-white/5 p-6 transition hover:border-white/20 hover:bg-white/10"
+              className="group relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
             >
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md bg-white text-black">
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md bg-slate-900 text-white">
                 <f.icon size={18} />
               </div>
               <h3 className="text-lg font-medium">{f.title}</h3>
-              <p className="mt-2 text-sm text-white/70">{f.desc}</p>
-              <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10" />
+              <p className="mt-2 text-sm text-slate-600">{f.desc}</p>
+              <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-black/5" />
             </div>
           ))}
         </div>
